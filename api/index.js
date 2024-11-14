@@ -16,11 +16,12 @@ const apiData = require('../dummyData')
 
 const port = process.env.PORT || 3000
 
-const start = async () => {
+const start =  () => {
     try {
-        app.listen(
-            port , ()=>{ console.log(`The server is listening to ${port}`)}
-        )
+        // app.listen(
+        //     port , ()=>{ console.log(`The server is listening to ${port}`)}
+        // )
+        console.log('in app')
     } catch (error) {
         console.log(error)
     }
