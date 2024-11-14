@@ -11,23 +11,8 @@ app.use(cors({
 
 app.use(express.json())
 
-const apiData = require('../dummyData')
+const apiData = require('./dummyData')
 // app.set("view engine","ejs") //have to verify this
-
-const port = process.env.PORT || 3000
-
-// const start = () => {
-//     try {
-//         app.listen(port, () => {
-//             console.log(`The server is listening on port ${port}`);
-//         });
-//     } catch (error) {
-//         console.log(error);
-//     }
-// };
-
-// start()
-
 app.get('/',(req,res)=>{
     res.send("Welcome to Attyre backend")
 })
@@ -47,4 +32,17 @@ app.post('/generate-palette',(req,res)=>{
     })
 })
 
-module.exports = app;
+
+const port = process.env.PORT || 3000
+
+const start = () => {
+    try {
+        app.listen(port, () => {
+            console.log(`The server is listening on port ${port}`);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+start()
