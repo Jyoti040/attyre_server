@@ -16,17 +16,17 @@ const apiData = require('../dummyData')
 
 const port = process.env.PORT || 3000
 
-const start = () => {
-    try {
-        app.listen(port, () => {
-            console.log(`The server is listening on port ${port}`);
-        });
-    } catch (error) {
-        console.log(error);
-    }
-};
+// const start = () => {
+//     try {
+//         app.listen(port, () => {
+//             console.log(`The server is listening on port ${port}`);
+//         });
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
-start()
+// start()
 
 app.get('/',(req,res)=>{
     res.send("Welcome to Attyre backend")
